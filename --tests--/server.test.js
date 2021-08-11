@@ -38,17 +38,19 @@ describe('my API Server', ()=> {
         expect(response.status).toEqual(200);
     });
 
+    it('handles update spicific food database request', async () => {
+        // add test
+        const response = await request.put('/food/10'); // async
+        expect(response.status).toEqual(200);
+    });
+
     it('handles delet one spicific food database request', async () => {
         // add test
         const response = await request.delete('/food/9'); // async
         expect(response.status).toEqual(204);
     });
 
-    it('handles update spicific food database request', async () => {
-        // add test
-        const response = await request.put('/food/10'); // async
-        expect(response.status).toEqual(200);
-    });
+   
 
 });
 
